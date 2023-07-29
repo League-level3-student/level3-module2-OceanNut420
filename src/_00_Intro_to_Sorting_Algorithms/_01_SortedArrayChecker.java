@@ -9,8 +9,31 @@ public class _01_SortedArrayChecker {
      * and false otherwise.
      */
     public static boolean intArraySorted(int[] arr) {
+    	
+    	int[] array = arr;
+    	
+    	for(int w=0;w<3;w++) {
+    		System.out.println(array[w]);
+    	}
         
-        return false;
+    	//for (int i = 0; i < arr.length; i++) {
+        //    for (int k = 0; k < arr.length - 1; k++) {
+        //        if( arr[k] > arr[ k+1 ] ) {
+        //            int temp = arr[k];
+        //            arr[k] = arr[ k+1 ];
+        //            arr[ k+1 ] = temp;
+        //        }
+        //    }
+        //}
+    	
+    	    	
+    	if(arr[0] <= arr[1] && arr[1] <= arr[2] && arr[2] <= arr[3]) {
+    		return true;
+    	}
+    	else {
+    		return false;
+    	}
+    	
     }
 
     /*

@@ -15,8 +15,9 @@ public class _01_SortedArrayCheckerTest {
         int[] unsorted = {3, 2, 9, 3, 1, 0};
         int[] sorted = {0, 1, 2, 2, 3, 4};
 
-        assertFalse(_01_SortedArrayChecker.intArraySorted(unsorted));
         assertTrue(_01_SortedArrayChecker.intArraySorted(sorted));
+        assertFalse(_01_SortedArrayChecker.intArraySorted(unsorted));
+        
     }
 
 //    @Test
