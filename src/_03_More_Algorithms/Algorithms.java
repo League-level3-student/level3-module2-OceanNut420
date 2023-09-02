@@ -38,6 +38,47 @@ public class Algorithms {
     }
     
     public static int findBrokenEgg(List<String> eggs) {
+    	
         return 0;
+    }
+    public static Boolean containsSOS(List<String> message1) {
+    	for(int i=0;i<message1.size();i++) {
+    		if(message1.get(i).equals("... --- ...")) {
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+    public static Boolean containsSOS2(List<String> message2) {
+    	for(int i=0;i<message2.size();i++) {
+    		if(message2.get(i).equals("... --- ...")) {
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+    public static List<Double> sortScores(List<Double> results) {
+    	
+    	for (int i = 0; i < results.size(); i++) {
+            for (int k = 0; k < results.size() - 1; k++) {
+                if( results.get(k) > results.get(k+1) ) {
+                    //Double temp = results[k];
+                    //results(k) = arr[ k+1 ];
+                    //arr[ k+1 ] = temp;
+                	
+                	Double temp = results.get(k);
+                	results.remove(k);
+                	results.add(k+1, temp);;
+                }
+            }
+        }
+    	
+    	/*
+    	for(int j=0;j<results.size();j++) {
+    		System.out.println(results.get(j));
+    	}
+    	*/
+    	
+    	return results;
     }
 }
