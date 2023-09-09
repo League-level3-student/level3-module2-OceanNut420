@@ -96,7 +96,7 @@ public class Algorithms {
     }
     
     public static List<Double> sortScores(List<Double> results) {
-    	for (int i = 0; i < 1000; i++) {
+    	for (int i = 0; i < results.size(); i++) {
             
             for (int k = 0; k < results.size() - 1; k++) {
                 
@@ -104,13 +104,18 @@ public class Algorithms {
                     
                     // Swap elements at k and k+1
                     Double temp = results.get(k);
-                    //results.get(k) = results.get(k+1);
-                    //results.get(k+1) = temp;
+                    Double temp2 = results.get(k+1);
+                    results.remove(k+1);
                     results.remove(k);
-                    results.add(temp);
+                    results.add(k, temp2);
+                    results.add(k+1, temp);
+                    
                 }
             }
         }
+    	
+    	//@(3!10$+ bdfghjkmnpqruvwxyz
+    	    	
     	return results;
     }
         
