@@ -95,6 +95,7 @@ public class Algorithms {
     	return false;
     }
     
+    
     public static List<Double> sortScores(List<Double> results) {
     	for (int i = 0; i < results.size(); i++) {
             
@@ -105,18 +106,53 @@ public class Algorithms {
                     // Swap elements at k and k+1
                     Double temp = results.get(k);
                     Double temp2 = results.get(k+1);
-                    results.remove(k+1);
-                    results.remove(k);
-                    results.add(k, temp2);
-                    results.add(k+1, temp);
+                    results.set(k, temp2);
+                    results.set(k+1, temp);
+                    
+                 
                     
                 }
             }
         }
     	
-    	//@(3!10$+ bdfghjkmnpqruvwxyz
-    	    	
+    	
     	return results;
+    }
+    public static List<String> sortDNA(List<String> unsortedSequences) {
+    	
+    	for (int i = 0; i < unsortedSequences.size(); i++) {
+            for (int k = 0; k < unsortedSequences.size() - 1; k++) {
+                if(unsortedSequences.get(k).length() > unsortedSequences.get(k+1).length() ) {
+                    // Swap elements at k and k+1
+                	String temp = unsortedSequences.get(k);
+                    String temp2 = unsortedSequences.get(k+1);
+                    unsortedSequences.set(k, temp2);
+                    unsortedSequences.set(k+1, temp);
+                    
+                }
+            }
+        }
+    	
+    	return unsortedSequences;
+    }
+    public static List<String> sortWords(List<String> words){
+    	
+    	for (int i = 0; i < words.size(); i++) {
+            for (int k = 0; k < words.size() - 1; k++) {
+                if(words.get(k).compareTo(words.get(k+1)) > 0) {
+                    // Swap elements at k and k+1
+                	String temp = words.get(k);
+                    String temp2 = words.get(k+1);
+                    words.set(k, temp2);
+                    words.set(k+1, temp);
+                    
+                }
+            }
+        }
+    	
+    	return words;
     }
         
 }
+
+//@(3!10$+ bdfghjkmnpqruvwxyz
